@@ -17,14 +17,12 @@ body{
 
 .sidebar{
   color: rgb(0, 0, 0);
-  /* border: 2px solid;
-  border-color: red; */
+
   z-index: 1;
 }
 
 .main{
-    /* background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-repeat: no-repeat; */
+   
     background-size: cover;
     z-index: -5;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
@@ -41,7 +39,6 @@ body{
 
 .container{
     
-    /* border: 2px solid blue; */
     height: 650px;
     min-width:300px;
 
@@ -73,7 +70,6 @@ h1{
 .box{
     display: flex;
     color: #fff ;
-    /* border: 2px solid green; */
     justify-content: center;
     align-items: center;
 
@@ -108,13 +104,11 @@ grid-row: 1 / 3;
 #box-7{
     grid-column: 1 / 4;
  
- /* background-blend-mode: hard-light;
- */ }
+}
 
 #box-3{
  background-position: center;
  background-blend-mode: hard-light;
- /* grid-row: 2 / 4; */
 
 }
 
@@ -138,3 +132,36 @@ grid-row: 1 / 3;
 #box-2{
     background-blend-mode: hard-light;
 }
+
+@media (max-width: 767px) {
+    .main {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  
+    .box {
+
+      
+      width: 100%;
+      margin: 10px;
+      height: 300px;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .sidebar{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #box-7{
+        background-position: left;
+    }
+  }
